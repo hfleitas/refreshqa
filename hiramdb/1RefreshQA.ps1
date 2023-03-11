@@ -35,3 +35,4 @@ Invoke-DbaQuery -SqlInstance hiramdb1 -Database hiramdb -File ".\4ResetData.sql"
 
 Invoke-DbaQuery -SqlInstance hiramdb1 -Database hiramdb -File ".\4SyncLogins.sql"
 Invoke-DbaQuery -SqlInstance hiramdb1 -Database hiramdb -File ".\5ResetDBSecurityPermissions.sql"
+

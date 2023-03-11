@@ -24,7 +24,7 @@ insert #jobstatus exec msdb.dbo.sp_help_jobactivity;
 
 select run_status 
 from #jobstatus 
-where job_name ='Backup.Diff'
+where job_name ='DatabaseBackup - USER_DATABASES - DIFF'
 and run_requested_date >= dateadd(minute,-15,getdate()) 
 and run_status = 1;
 go

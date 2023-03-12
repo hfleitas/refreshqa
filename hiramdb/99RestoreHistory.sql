@@ -1,4 +1,4 @@
-select rh.destination_database_name as Database,
+select rh.destination_database_name as 'Database',
        case when rh.restore_type = 'D' then 'Database'
             when rh.restore_type = 'F' then 'File'
             when rh.restore_type = 'I' then 'Differential'

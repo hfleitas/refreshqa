@@ -1,9 +1,9 @@
 set nocount on;
 
-if @@servername in ('FLDSVRSDV01','FLDSVRSQA01')
+if @@servername in ('hiramdb1')
 begin
-	ALTER DATABASE [LicenseManagement] SET RECOVERY SIMPLE WITH NO_WAIT;
-	exec ('use LicenseManagement; DBCC SHRINKFILE (2 , 64)');
+	ALTER DATABASE [hiramdb] SET RECOVERY SIMPLE WITH NO_WAIT;
+	exec ('use hiramdb; DBCC SHRINKFILE (2 , 64)');
 end
 go
 
@@ -11,6 +11,6 @@ go
 EXEC master.dbo.sp_MSforeachdb @command1 = N'
 if ''?'' not in (''master'',''model'',''msdb'',''tempdb'',''distribution'',''distribution1'',''distribution2'',''claims'') 
 begin 
-	exec ?.dbo.sp_changedbowner @loginame = sa, @map = false 
+	exec ?.dbo.sp_changedbowner @loginame = skylar, @map = false 
 end'
 go

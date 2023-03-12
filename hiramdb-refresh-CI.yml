@@ -1,0 +1,30 @@
+# Variable 'skylarpw' was defined in the Variables tab
+trigger:
+  branches:
+    include:
+    - main
+  paths:
+    include:
+    - hiramdb
+resources:
+  repositories:
+  - repository: self
+    type: git
+    ref: refs/heads/main
+jobs:
+- job: Job_1
+  displayName: Agent job 1
+  pool:
+    name: Default
+  steps:
+  - checkout: self
+    clean: true
+    fetchTags: false
+  - task: CopyFiles@2
+    displayName: Copy Files
+    inputs:
+      SourceFolder: hiramdb
+      TargetFolder: c:\RefreshQA
+      CleanTargetFolder: true
+      OverWrite: true
+...

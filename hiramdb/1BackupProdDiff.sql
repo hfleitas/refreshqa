@@ -7,6 +7,6 @@ begin
 	begin
 		exec msdb.dbo.sp_start_job 'DatabaseBackup - USER_DATABASES - DIFF'
 	end
-	waitfor delay '00:05:00'
+	waitfor delay '00:00:15'
 end
 go 

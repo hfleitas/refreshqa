@@ -9,6 +9,6 @@
 - Powershell & Pwsh 7
 - IaaS: SQL Server 2019 & 2022
 
-![summary](summary.png)
+![diagram](diagram.png)
 
 ![hiramdb-api-CD logs](hiramdb-api-CD.png)
